@@ -85,6 +85,89 @@ const FEITICO_AMORA: MenuItem = {
   imgL: uP('1514362545857-3bc16c4c7d1b'),
 };
 
+const MINI_MAGIC: MenuItem = {
+  name: 'Mini Magic',
+  desc: '4 mini lanches: Magic Cheddar, Magic Bacon, Magic Burguer e X-Músico',
+  price: 'R$52',
+  img: u('1571091718767-18b5b1457add'),
+  imgL: uP('1571091718767-18b5b1457add'),
+};
+
+const MAGIC_PASTRAMI: MenuItem = {
+  name: 'Magic Pastrami',
+  desc: 'Pastrami curado Berna, mussarela, rúcula e tomate',
+  price: 'R$47',
+  img: u('1550547660-d9450f859349'),
+  imgL: uP('1550547660-d9450f859349'),
+};
+
+const MAGIC_CHEDDAR: MenuItem = {
+  name: 'Magic Cheddar',
+  desc: 'Burguer artesanal 180g, cebola caramelizada, cheddar e bacon',
+  price: 'R$44',
+  img: u('1586190848861-99aa4a171e90'),
+  imgL: uP('1586190848861-99aa4a171e90'),
+};
+
+const HOT_DOG: MenuItem = {
+  name: 'Hot Dog',
+  desc: 'Salsicha Swiss sem nitrato/corante/baixo sódio, molho de tomate, batata palha e bacon',
+  price: 'R$32',
+  img: u('1619740455993-9e612b1af08a'),
+  imgL: uP('1619740455993-9e612b1af08a'),
+};
+
+const MAGIC_VEGETARIANO: MenuItem = {
+  name: 'Magic Vegetariano',
+  desc: 'Burguer de legumes, mussarela, catupiry, rúcula e tomate',
+  price: 'R$38',
+  img: u('1520072959219-c595dc870360'),
+  imgL: uP('1520072959219-c595dc870360'),
+  color: '#5fce74',
+};
+
+const FRANGO_CHAPA_PALMITO: MenuItem = {
+  name: 'Frango na Chapa e Palmito',
+  desc: 'Frango, palmito, catupiry e pão',
+  price: 'R$54',
+  img: u('1598515214211-89d3c73ae83b'),
+  imgL: uP('1598515214211-89d3c73ae83b'),
+};
+
+const ALMONDEGAS: MenuItem = {
+  name: 'Almôndegas Gourmet',
+  desc: 'Recheadas com mussarela e gorgonzola',
+  price: 'R$30',
+  img: u('1529042410759-befb1204b468'),
+  imgL: uP('1529042410759-befb1204b468'),
+  units: ['2 un · R$30', '4 un · R$56', '6 un · R$80'],
+  seal: true,
+};
+
+const PALMITO_EMPANADO: MenuItem = {
+  name: 'Palmito Empanado',
+  desc: 'Presunto/queijo e geléia de pimenta',
+  price: 'R$46',
+  img: u('1548340748-6d2b7d7da280'),
+  imgL: uP('1548340748-6d2b7d7da280'),
+};
+
+const TORRESMO_ROLO: MenuItem = {
+  name: 'Torresmo de Rolo',
+  desc: 'Crocante por fora, macio por dentro',
+  price: 'R$42',
+  img: u('1626082927389-6cd097cdc6ec'),
+  imgL: uP('1626082927389-6cd097cdc6ec'),
+};
+
+const DADINHO_TAPIOCA: MenuItem = {
+  name: 'Dadinho de Tapioca',
+  desc: 'Acompanha geléia de pimenta',
+  price: 'R$34',
+  img: u('1626645738196-c2a7c87a8f58'),
+  imgL: uP('1626645738196-c2a7c87a8f58'),
+};
+
 /* ----------------------------------------------------------------- cardápio */
 
 const CATEGORIES: Category[] = [
@@ -92,18 +175,26 @@ const CATEGORIES: Category[] = [
     name: 'Favoritos da casa',
     isFavorites: true,
     note: 'Os mais pedidos da galera — vai no certo.',
-    items: [MAGIC_BACON, MAGIC_COSTELA, COXINHAS, BATATA_TUDAO, FEITICO_AMORA],
+    items: [
+      MINI_MAGIC,
+      MAGIC_COSTELA,
+      MAGIC_PASTRAMI,
+      MAGIC_CHEDDAR,
+      HOT_DOG,
+      MAGIC_VEGETARIANO,
+      FRANGO_CHAPA_PALMITO,
+      COXINHAS,
+      ALMONDEGAS,
+      PALMITO_EMPANADO,
+      TORRESMO_ROLO,
+      DADINHO_TAPIOCA,
+    ],
   },
   {
     name: 'Lanches',
     note: 'Todos os lanches acompanham batata frita McCain (100g) e Molho Especial. Lanches de hambúrguer no Pão Brioche; os demais no Baguete Parmesão.',
     items: [
-      {
-        name: 'Mini Magic',
-        desc: '4 mini lanches: Magic Cheddar, Magic Bacon, Magic Burguer e X-Músico',
-        price: 'R$52',
-        img: u('1571091718767-18b5b1457add'),
-      },
+      MINI_MAGIC,
       {
         name: 'Magic Filézinho',
         desc: 'Coração de alcatra, mussarela, bacon, rúcula e tomate',
@@ -117,19 +208,9 @@ const CATEGORIES: Category[] = [
         price: 'R$45',
         img: u('1553979459-d2229ba7433b'),
       },
-      {
-        name: 'Magic Pastrami',
-        desc: 'Pastrami curado Berna, mussarela, rúcula e tomate',
-        price: 'R$47',
-        img: u('1550547660-d9450f859349'),
-      },
+      MAGIC_PASTRAMI,
       MAGIC_BACON,
-      {
-        name: 'Magic Cheddar',
-        desc: 'Burguer artesanal 180g, cebola caramelizada, cheddar e bacon',
-        price: 'R$44',
-        img: u('1586190848861-99aa4a171e90'),
-      },
+      MAGIC_CHEDDAR,
       {
         name: 'Magic Chicken',
         desc: 'Filé de frango, mussarela, catupiry, bacon, alface e tomate',
@@ -142,36 +223,20 @@ const CATEGORIES: Category[] = [
         price: 'R$40',
         img: u('1552332386-f8dd00dc2f85'),
       },
-      {
-        name: 'Hot Dog',
-        desc: 'Salsicha Swiss sem nitrato/corante/baixo sódio, molho de tomate, batata palha e bacon',
-        price: 'R$32',
-        img: u('1619740455993-9e612b1af08a'),
-      },
+      HOT_DOG,
       {
         name: 'X-Músico',
         desc: 'Burguer Angus 120g, mussarela, alface e tomate',
         price: 'R$39',
         img: u('1551538827-9c037cb4f32a'),
       },
-      {
-        name: 'Magic Vegetariano',
-        desc: 'Burguer de legumes, mussarela, catupiry, rúcula e tomate',
-        price: 'R$38',
-        img: u('1520072959219-c595dc870360'),
-        color: '#5fce74',
-      },
+      MAGIC_VEGETARIANO,
     ],
   },
   {
     name: 'Porções na chapa',
     items: [
-      {
-        name: 'Frango na Chapa e Palmito',
-        desc: 'Frango, palmito, catupiry e pão',
-        price: 'R$54',
-        img: u('1598515214211-89d3c73ae83b'),
-      },
+      FRANGO_CHAPA_PALMITO,
       {
         name: 'Coração de Alcatra Acebolado',
         desc: 'Acompanha pão e vinagrete',
@@ -206,46 +271,20 @@ const CATEGORIES: Category[] = [
   {
     name: 'Coxinhas & almôndegas',
     note: 'Não misturamos unidades entre coxinhas e almôndegas.',
-    items: [
-      COXINHAS,
-      {
-        name: 'Almôndegas Gourmet',
-        desc: 'Recheadas com mussarela e gorgonzola',
-        price: 'R$30',
-        img: u('1529042410759-befb1204b468'),
-        imgL: uP('1529042410759-befb1204b468'),
-        units: ['2 un · R$30', '4 un · R$56', '6 un · R$80'],
-        seal: true,
-      },
-    ],
+    items: [COXINHAS, ALMONDEGAS],
   },
   {
     name: 'Petiscos fritos',
     items: [
-      {
-        name: 'Palmito Empanado',
-        desc: 'Presunto/queijo e geléia de pimenta',
-        price: 'R$46',
-        img: u('1548340748-6d2b7d7da280'),
-      },
-      {
-        name: 'Torresmo de Rolo',
-        desc: 'Crocante por fora, macio por dentro',
-        price: 'R$42',
-        img: u('1626082927389-6cd097cdc6ec'),
-      },
+      PALMITO_EMPANADO,
+      TORRESMO_ROLO,
       {
         name: 'Filé de Frango Empanado',
         desc: 'Douradinho, do jeito que todo mundo gosta',
         price: 'R$44',
         img: u('1562967914-608f82629710'),
       },
-      {
-        name: 'Dadinho de Tapioca',
-        desc: 'Acompanha geléia de pimenta',
-        price: 'R$34',
-        img: u('1626645738196-c2a7c87a8f58'),
-      },
+      DADINHO_TAPIOCA,
       BATATA_TUDAO,
       {
         name: 'Batata + Catupiry e Bacon',
@@ -346,6 +385,19 @@ const InstagramIcon = () => (
   </svg>
 );
 
+const ChevronIcon = ({ dir }: { dir: 'left' | 'right' }) => (
+  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+    <path
+      d={dir === 'right' ? 'M9 5l7 7-7 7' : 'M15 5l-7 7 7 7'}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 /* --------------------------------------------------------- render de itens */
 
 function FavoriteCard({ item, index }: { item: MenuItem; index: number }) {
@@ -431,9 +483,32 @@ export default function App() {
   const [active, setActive] = useState<number>(0);
   const sectionTopRef = useRef<HTMLDivElement | null>(null);
   const navRef = useRef<HTMLElement | null>(null);
+  const navScrollRef = useRef<HTMLDivElement | null>(null);
   const firstRender = useRef(true);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   const category = CATEGORIES[active];
+
+  // mostra/some as setas da nav conforme a posição do scroll horizontal
+  useEffect(() => {
+    const el = navScrollRef.current;
+    if (!el) return;
+
+    const update = () => {
+      const max = el.scrollWidth - el.clientWidth;
+      setCanScrollLeft(el.scrollLeft > 4);
+      setCanScrollRight(el.scrollLeft < max - 4);
+    };
+
+    update();
+    el.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    return () => {
+      el.removeEventListener('scroll', update);
+      window.removeEventListener('resize', update);
+    };
+  }, []);
 
   // animações de entrada ao rolar
   useEffect(() => {
@@ -491,18 +566,26 @@ export default function App() {
 
       {/* ------------------------------------------------------------- nav */}
       <nav className="nav" ref={navRef} aria-label="Categorias do cardápio">
-        <div className="nav__scroll">
-          {CATEGORIES.map((cat, i) => (
-            <button
-              key={cat.name}
-              type="button"
-              className={`chip ${i === active ? 'chip--on' : ''}`}
-              aria-current={i === active ? 'true' : undefined}
-              onClick={() => setActive(i)}
-            >
-              {cat.name}
-            </button>
-          ))}
+        <div className="nav__wrap">
+          <div className="nav__scroll" ref={navScrollRef}>
+            {CATEGORIES.map((cat, i) => (
+              <button
+                key={cat.name}
+                type="button"
+                className={`chip ${i === active ? 'chip--on' : ''}`}
+                aria-current={i === active ? 'true' : undefined}
+                onClick={() => setActive(i)}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
+          <span className={`nav__fade nav__fade--left ${canScrollLeft ? 'is-visible' : ''}`} aria-hidden="true">
+            <ChevronIcon dir="left" />
+          </span>
+          <span className={`nav__fade nav__fade--right ${canScrollRight ? 'is-visible' : ''}`} aria-hidden="true">
+            <ChevronIcon dir="right" />
+          </span>
         </div>
       </nav>
 
