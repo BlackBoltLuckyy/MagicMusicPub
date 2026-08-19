@@ -479,6 +479,22 @@ button {
   flex-direction: column;
 }
 
+.rows__group {
+  font-family: var(--f-title);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin: 22px 0 4px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.rows__group--first {
+  margin-top: 4px;
+}
+
 .row {
   display: flex;
   align-items: flex-start;

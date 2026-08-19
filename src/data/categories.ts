@@ -185,6 +185,291 @@ export const CATEGORIES: Category[] = [
         desc: 'Pra segurar o rolê até o último bis',
         price: 'R$6',
       }),
+
+      // ---- Cervejas ----
+      item({
+        name: 'Cervejas Especiais',
+        desc: 'Consulte os rótulos disponíveis',
+        price: 'R$23',
+        group: 'Cervejas',
+      }),
+      item({
+        name: 'Chope de Vinho',
+        desc: '600ml · na chopeira',
+        price: 'R$18',
+        group: 'Cervejas',
+      }),
+      item({
+        name: 'Chope Artesanal',
+        desc: '400ml',
+        price: 'R$16',
+        group: 'Cervejas',
+      }),
+      item({
+        name: 'Heineken 600ml',
+        price: 'R$18',
+        group: 'Cervejas',
+      }),
+      item({
+        name: 'Original / Spaten',
+        desc: '600ml',
+        price: 'R$16',
+        group: 'Cervejas',
+      }),
+      item({
+        name: 'Antarctica / Amstel',
+        desc: '600ml',
+        price: 'R$15',
+        group: 'Cervejas',
+      }),
+
+      // ---- Long Neck ----
+      item({
+        name: 'Ultra',
+        desc: 'Sem glúten · long neck',
+        price: 'R$14',
+        group: 'Long Neck',
+      }),
+      item({
+        name: 'Corona Extra',
+        desc: 'Long neck',
+        price: 'R$14',
+        group: 'Long Neck',
+      }),
+      item({
+        name: 'Heineken 355ml',
+        desc: 'Long neck',
+        price: 'R$14',
+        group: 'Long Neck',
+      }),
+      item({
+        name: 'Budweiser',
+        desc: 'Long neck',
+        price: 'R$13',
+        group: 'Long Neck',
+      }),
+      item({
+        name: 'Stella Artois',
+        desc: 'Long neck',
+        price: 'R$13',
+        group: 'Long Neck',
+      }),
+      item({
+        name: 'Smirnoff Ice',
+        desc: 'Long neck',
+        price: 'R$14',
+        group: 'Long Neck',
+      }),
+      item({
+        name: 'Skol Beats',
+        desc: 'Long neck',
+        price: 'R$14',
+        group: 'Long Neck',
+      }),
+      item({
+        name: 'Balde de Gelo',
+        desc: 'Pra manter a bebida sempre gelada',
+        price: 'R$7',
+        group: 'Long Neck',
+      }),
+
+      // ---- 0% Álcool ----
+      item({
+        name: 'Heineken 0% Álcool',
+        price: 'R$14',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'Corona 0% Álcool',
+        price: 'R$14',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'IPA 0% Álcool',
+        desc: 'Puro malte',
+        price: 'R$15',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'Energético Red Bull',
+        price: 'R$15',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'Energético Monster',
+        price: 'R$15',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'Soda Italiana',
+        desc: 'Diversos sabores',
+        price: 'R$20',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'Refrigerantes',
+        desc: 'Coca-Cola · Coca Zero · Tônica · Guaraná · Citrus · Soda',
+        price: 'R$7',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'Água com Gás',
+        price: 'R$6',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'Água Natural',
+        price: 'R$5',
+        group: '0% Álcool',
+      }),
+      item({
+        name: 'C.D.B.',
+        desc: 'Limão · Sal · Gelo',
+        price: 'R$5',
+        group: '0% Álcool',
+      }),
+
+      // ---- Drinks ----
+      item({
+        name: 'Jägerbomb',
+        desc: 'Jägermeister + energético',
+        price: 'R$40',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Tanqueray Tônica',
+        desc: 'Gin Tanqueray + tônica + especiarias',
+        price: 'R$38',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Kaipiroska',
+        desc: 'Jägermeister ou vodka Absolut + frutas',
+        price: 'R$38',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Maracujack',
+        desc: 'Jack Daniels + maracujá + citrus',
+        price: 'R$38',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Margarita',
+        desc: 'Tequila + licor de laranja + limão',
+        price: 'R$38',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Tchay',
+        desc: 'Malibu ou whisky + energético + gelo de coco',
+        price: 'R$35',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Jack Coke',
+        desc: 'Jack Daniels + Coca-Cola',
+        price: 'R$34',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Negroni',
+        desc: 'Campari + gin + vermute',
+        price: 'R$32',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Caipi-Fruta',
+        desc: 'Vodka, cachaça ou saquê + frutas',
+        price: 'R$30',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Gin Tônica',
+        desc: 'Gin + tônica + especiarias',
+        price: 'R$25',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Campari Citrus',
+        desc: 'Campari + laranja/limão + Schweppes Citrus',
+        price: 'R$25',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Cuba-Libre',
+        desc: 'Rum ouro + Coca-Cola',
+        price: 'R$25',
+        group: 'Drinks',
+      }),
+      item({
+        name: 'Óleo de Harley',
+        desc: 'Conhaque + licor de cacau',
+        price: 'R$20',
+        group: 'Drinks',
+      }),
+
+      // ---- Destilados · Dose 50ml ----
+      item({
+        name: 'Jägermeister',
+        price: 'R$28',
+        group: 'Destilados · Dose 50ml',
+      }),
+      item({
+        name: "Jack Daniel's",
+        desc: 'Old No.7 ou Honey',
+        price: 'R$28',
+        group: 'Destilados · Dose 50ml',
+      }),
+      item({
+        name: 'Vodka Cîroc',
+        desc: 'Francesa',
+        price: 'R$28',
+        group: 'Destilados · Dose 50ml',
+      }),
+      item({
+        name: 'JW Black Label',
+        desc: '12 anos',
+        price: 'R$28',
+        group: 'Destilados · Dose 50ml',
+      }),
+      item({
+        name: 'Gin Tanqueray',
+        desc: 'Diversos sabores',
+        price: 'R$28',
+        group: 'Destilados · Dose 50ml',
+      }),
+      item({
+        name: 'Vodka Absolut',
+        desc: 'Sueca',
+        price: 'R$28',
+        group: 'Destilados · Dose 50ml',
+      }),
+      item({
+        name: 'Tequila José Cuervo',
+        desc: 'Prata ou ouro',
+        price: 'R$25',
+        group: 'Destilados · Dose 50ml',
+      }),
+      item({
+        name: 'JW Red Label',
+        desc: '8 anos',
+        price: 'R$22',
+        group: 'Destilados · Dose 50ml',
+      }),
+
+      // ---- Destilados Nacionais · Dose 50ml ----
+      item({
+        name: 'Destilados Nacionais',
+        desc: 'Campari · Domecq · Rum Bacardi · Smirnoff · Gin · Malibu · Passport',
+        price: 'R$15',
+        group: 'Destilados Nacionais · Dose 50ml',
+      }),
+      item({
+        name: 'Cachaça Artesanal',
+        price: 'R$12',
+        group: 'Destilados Nacionais · Dose 50ml',
+      }),
     ],
   },
 ];

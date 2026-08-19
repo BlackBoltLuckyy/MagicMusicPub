@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import type { Category } from '../types/menu';
 import { FavoriteCard } from './FavoriteCard';
 import { ItemRow } from './ItemRow';
@@ -21,9 +22,19 @@ export function MenuSection({ category }: { category: Category }) {
         </div>
       ) : (
         <div className="rows">
-          {category.items.map((item, i) => (
-            <ItemRow key={item.name} item={item} index={i} />
-          ))}
+          {category.items.map((item, i) => {
+            const isNewGroup = item.group && item.group !== category.items[i - 1]?.group;
+            return (
+              <Fragment key={item.name}>
+                {isNewGroup && (
+                  <h3 className={`rows__group reveal ${i === 0 ? 'rows__group--first' : ''}`}>
+                    {item.group}
+                  </h3>
+                )}
+                <ItemRow item={item} index={i} />
+              </Fragment>
+            );
+          })}
         </div>
       )}
 
