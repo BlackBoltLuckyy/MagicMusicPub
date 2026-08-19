@@ -5,9 +5,18 @@ import { onImgError } from '../../utils/dom';
 import { ChevronIcon } from '../icons';
 import seloQuitutes from '../../assets/brand/quitutes-da-mel.png';
 
-export function ProductDetail({ item, onClose }: { item: MenuItem; onClose: () => void }) {
+export function ProductDetail({
+  item,
+  onClose,
+  video,
+}: {
+  item: MenuItem;
+  onClose: () => void;
+  video?: string;
+}) {
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [showVideo, setShowVideo] = useState(false);
   const hasGallery = item.images.length > 1;
 
   useEffect(() => {
@@ -42,25 +51,46 @@ export function ProductDetail({ item, onClose }: { item: MenuItem; onClose: () =
 
       <div className="productDetail__panel" onClick={(e) => e.stopPropagation()}>
         <div className="productDetail__media">
-          <div className="productDetail__gallery" ref={galleryRef} onScroll={handleScroll}>
-            {item.images.map((src, i) => (
-              <img
-                key={src}
-                className="productDetail__img"
-                src={src}
-                alt={`${item.name} — foto ${i + 1} de ${item.images.length}`}
-                loading={i === 0 ? 'eager' : 'lazy'}
-                decoding="async"
-                onError={onImgError}
-              />
-            ))}
-          </div>
+          {showVideo && video ? (
+            <video
+              className="productDetail__video"
+              src={video}
+              controls
+              autoPlay
+              playsInline
+            />
+          ) : (
+            <div className="productDetail__gallery" ref={galleryRef} onScroll={handleScroll}>
+              {item.images.map((src, i) => (
+                <img
+                  key={src}
+                  className="productDetail__img"
+                  src={src}
+                  alt={`${item.name} — foto ${i + 1} de ${item.images.length}`}
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  onError={onImgError}
+                />
+              ))}
+            </div>
+          )}
 
-          {item.seal && (
+          {item.seal && !showVideo && (
             <img className="seal seal--detail" src={seloQuitutes} alt="Selo Quitutes da Mel" loading="lazy" />
           )}
 
-          {hasGallery && (
+          {video && (
+            <button
+              type="button"
+              className="productDetail__videoToggle"
+              onClick={() => setShowVideo((v) => !v)}
+              aria-label={showVideo ? 'Ver fotos' : 'Ver vídeo do lanche'}
+            >
+              {showVideo ? '🖼 Fotos' : '▶ Vídeo'}
+            </button>
+          )}
+
+          {hasGallery && !showVideo && (
             <>
               <button
                 type="button"

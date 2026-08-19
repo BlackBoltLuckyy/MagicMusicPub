@@ -29,6 +29,7 @@ export function FavoriteCard({ item, index }: { item: MenuItem; index: number })
             onError={onImgError}
           />
           <span className="fav__badge">⭐ Favorito</span>
+          {item.video && <span className="fav__videoBadge" aria-hidden="true">🎬</span>}
           {item.seal && (
             <img className="seal seal--fav" src={seloQuitutes} alt="Selo Quitutes da Mel" loading="lazy" />
           )}
@@ -53,7 +54,7 @@ export function FavoriteCard({ item, index }: { item: MenuItem; index: number })
         </div>
       </article>
 
-      {detailOpen && <ProductDetail item={item} onClose={() => setDetailOpen(false)} />}
+      {detailOpen && <ProductDetail item={item} onClose={() => setDetailOpen(false)} video={item.video} />}
     </>
   );
 }
