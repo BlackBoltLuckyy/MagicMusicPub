@@ -4,7 +4,7 @@ export function InstagramFab() {
   return (
     <a
       className="fab"
-      href="https://instagram.com/magicmusicpub"
+      href="https://instagram.com/pubmagicmusic"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Abrir o Instagram do Magic Music Pub"

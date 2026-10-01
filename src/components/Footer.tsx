@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="footer">
       <img className="footer__logo" src={logo} alt="Magic Music Pub" />
       <p className="footer__phrase">Siga a gente e conheça o rolê 🎶</p>
-      <a className="btn-ig" href="https://instagram.com/magicmusicpub" target="_blank" rel="noopener noreferrer">
+      <a className="btn-ig" href="https://instagram.com/pubmagicmusic" target="_blank" rel="noopener noreferrer">
         <InstagramIcon />
         @magicmusicpub
       </a>
